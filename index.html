@@ -198,6 +198,48 @@
       transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), fill 0.35s ease;
     }
 
+    /* Featured "Hajar" Button - stands out from the rest */
+    .link-btn-featured {
+      background: linear-gradient(135deg, #f97316 0%, #db2777 50%, #9333ea 100%);
+      color: #ffffff;
+      font-size: 1.2rem;
+      font-weight: 800;
+      padding: 1.5rem 2.25rem;
+      border: none;
+      box-shadow:
+        0 12px 24px -8px rgba(219, 39, 119, 0.45),
+        0 0 0 4px rgba(249, 115, 22, 0.08);
+      animation: featured-glow 2.4s ease-in-out infinite;
+      letter-spacing: 0.02em;
+    }
+
+    .link-btn-featured svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .link-btn-featured:hover {
+      background: linear-gradient(135deg, #fb923c 0%, #ec4899 50%, #a855f7 100%);
+      color: #ffffff;
+      transform: translateY(-3px) scale(1.02);
+      box-shadow:
+        0 16px 32px -8px rgba(219, 39, 119, 0.55),
+        0 0 0 4px rgba(249, 115, 22, 0.14);
+    }
+
+    @keyframes featured-glow {
+      0%, 100% {
+        box-shadow:
+          0 12px 24px -8px rgba(219, 39, 119, 0.45),
+          0 0 0 4px rgba(249, 115, 22, 0.08);
+      }
+      50% {
+        box-shadow:
+          0 14px 30px -6px rgba(219, 39, 119, 0.6),
+          0 0 0 8px rgba(249, 115, 22, 0.14);
+      }
+    }
+
     /* Dynamic Platform Accent Hovers */
     .link-btn-github:hover {
       background-color: #181717;
@@ -365,6 +407,16 @@
 
     <!-- Right Column: Links Panel -->
     <section class="links-panel">
+
+      <!-- Featured Hajar Button -->
+      <a href="https://hajarapp.mhamad-nabhan-222.workers.dev/" target="_blank" rel="noopener noreferrer" class="link-btn link-btn-featured" id="hajar-link">
+        <span>✨ Hajar</span>
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2l1.9 5.6L19.5 9l-5.6 1.9L12 16l-1.9-5.1L4.5 9l5.6-1.4L12 2z"/>
+          <path d="M19 13l.95 2.05L22 16l-2.05.95L19 19l-.95-2.05L16 16l2.05-.95L19 13z"/>
+          <path d="M5 13l.95 2.05L8 16l-2.05.95L5 19l-.95-2.05L2 16l2.05-.95L5 13z"/>
+        </svg>
+      </a>
       
       <!-- GitHub Button -->
       <a href="https://github.com/mohamadalnabhan" target="_blank" rel="noopener noreferrer" class="link-btn link-btn-github" id="github-link">
